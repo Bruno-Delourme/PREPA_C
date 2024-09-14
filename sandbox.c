@@ -23,8 +23,10 @@ void ft_rev_int_tab(int *tab, int size)
 int	main()
 {
 
-	char str[]="A, B, C, D, E";
-	
-	printf("%d \n", ft_rev_int_tab(str));
+	char tab[5]={A, B, C, D, E};
+	i = 0;
+	ft_rev_int_tab(tab, 5);
+	while (i < 5)
+	printf("%d \n", tab[i]);
 	return (0);
 }
