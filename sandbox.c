@@ -1,32 +1,17 @@
-/*Écrire une fonction void ft_rev_int_tab(int *tab, int size); qui inverse les éléments 
- d'un tableau d'entiers.
+#include <unistd.h>
 
-tab : le tableau d'entiers à inverser.
-size : la taille du tableau. */
-
-void ft_rev_int_tab(int *tab, int size)
+void	ft_putstr(char *str)
 {
-	int 	temp_tab;
-	int	i;
-
-	i = 0;
-	(while i < (size / 2))
+	while (*str)
 	{
-		temp_tab = tab[i];
-		tab[i] = tab[size - 1 - i];
-		tab[(size - 1) - i] = temp_tab;
-		i++;
+		write(1, str, 1);
+		str++;
 	}
 }
 
-#include <stdio.h>
-int	main()
+int	main(void)
 {
-
-	char tab[5]={A, B, C, D, E};
-	i = 0;
-	ft_rev_int_tab(tab, 5);
-	while (i < 5)
-	printf("%d \n", tab[i]);
+	ft_putstr("Hello World!\n");
 	return (0);
 }
+
