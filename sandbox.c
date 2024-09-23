@@ -1,22 +1,18 @@
 #include <unistd.h>
 #include <stdio.h>
 
-int	ft_strlen(char *str)
+void	ft_print_numbers()
 {
-    int len;
-    len = 0;
-
-	while (*str)
+	char nb;	
+	nb = '0';
+	while(nb <= '9')
 	{
-		str++;
-        len++;
+		write(1, &nb, 1);
+		nb++;
 	}
-    return (len);
 }
-
-int	main(void)
-
-
-	printf("%d \n", ft_strlen("Hello Wooorld!!"));
+int main()
+{
+	ft_print_numbers();
 	return (0);
 }
